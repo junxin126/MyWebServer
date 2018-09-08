@@ -68,7 +68,6 @@ def say_hello(env, start_response):
     start_response(status, headers)
     return "hello junxin126"
 
-
 def say_haha(env, start_response):
     status = "200 OK"
     headers = [
@@ -84,7 +83,17 @@ urls = [
             ("/sayhaha", say_haha),
         ]
 app = Application(urls)
-
+# if __name__ == "__main__":
+#     urls = [
+#             ("/", show_ctime),
+#             ("/ctime", show_ctime),
+#             ("/sayhello", say_hello),
+#             ("/sayhaha", say_haha),
+#         ]
+#     app = Application(urls)
+#     http_server = HTTPServer(app)
+#     http_server.bind(8000)
+#     http_server.start()
 
 
 
